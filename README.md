@@ -64,15 +64,25 @@ The original FLARE 2022 CT scan volumes and corresponding segmentation masks wer
 
 - Each organ was associated with the **organ name** to guide the CLIPSeg model.
 
+##  Results after 20 Epochs
+
+| Fine-Tuning Strategy   | Train Dice ↑ | Val Dice ↑ | Training Time ↓ |
+|-----------------------|--------------|------------|-----------------|
+| Full Fine-Tuning       | 0.7527        | 0.6189      | 1.58 hrs         |
+| Decoder-Only Tuning    | 0.7761        | 0.6335      | 2.13 hrs         |
+| Adapter-Based Tuning   | 0.6524        | 0.5318      | 2.15 hrs         |
+
+
+
 ##  Observations
 
-During experimentation, unexpected resulst were seen:
+During experimentation, unexpected results were seen:
 
-> **Full fine-tuning** outperformed both decoder-only and adapter-based tuning not just in segmentation performance (higher Dice scores), but also in **training efficiency** (lower total training time).
+> **Full fine-tuning** outperformed both decoder-only and adapter-based tuning in terms of **training efficiency** (lower total training time).
 
 This was surprising, as full fine-tuning is generally expected to be more computationally expensive due to the larger number of trainable parameters.
 
-This result highlights that **parameter efficiency (fewer trainable weights)** doesn't always correlate with **training efficiency**, especially when domain adaptation is involved.
+This result highlights that **parameter efficiency (fewer trainable weights)** doesn't always correlate with **training efficiency**.
 
 
 ## References
