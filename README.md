@@ -68,8 +68,8 @@ The original FLARE 2022 CT scan volumes and corresponding segmentation masks wer
 
 | Fine-Tuning Strategy   | Train Dice ↑ | Val Dice ↑ | Training Time ↓ |
 |-----------------------|--------------|------------|-----------------|
-| Full Fine-Tuning       | 0.7527        | 0.6189      | 1.58 hrs         |
-| Decoder-Only Tuning    | 0.7761        | 0.6335      | 2.13 hrs         |
+| Full Fine-Tuning       | 0.7761        | 0.6335      | 1.58 hrs         |
+| Decoder-Only Tuning    | 0.7527        | 0.6189      | 2.13 hrs         |
 | Adapter-Based Tuning   | 0.6524        | 0.5318      | 2.15 hrs         |
 
 
